@@ -1,0 +1,9 @@
+.link {
+    text-decoration: none;
+    list-style: none;
+
+    &--white {
+        color: #fff;
+        font-weight: bold;
+    }
+}

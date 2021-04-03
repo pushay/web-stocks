@@ -1,0 +1,9 @@
+.home {
+    background-color: rgb(253, 253, 255);
+    height: 900px;
+    display: flex;
+    
+    &__section {
+        background-color: red;
+    }
+}

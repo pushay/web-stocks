@@ -1,0 +1,32 @@
+.stockParam {
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid black;
+
+    &__tr {
+        
+    }
+
+    &__th {
+       width: 0px;
+
+       &--name {
+        width: 10px;
+       }
+
+       &--lowest {
+        width: 165px;
+       }
+
+       &--highest {
+        
+       }
+
+       &--price {
+        width: 140px;
+       }
+
+       &--change {
+
+       }
+    }
+}
