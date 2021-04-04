@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import {stockDataText} from '../StockList/StockListText'
+import {connect} from 'react-redux';
+import * as actionTypes from '../../store/actions';
 
-export const StockData = (props) => {
+const StockData = (props) => {
 
     const [stockInfo, setStockInfo] = useState({})
 
@@ -20,16 +22,16 @@ export const StockData = (props) => {
         )
     }
 
-    const getStockInformation = () => {
-        fetch(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${props.symbol}&apikey=5DMXB0BMD61LUQWR`)
-            .then(response => response.json())
+    const getStockInformation = (symbol) => {
+        props.onGettingStockInfo(symbol)
     }
     
 
    const cacheFetchData = () => {
         if (!window.localStorage.getItem(props.symbol)){
             getStockData()
-        } else {
+        }
+        else {
             setStockInfo(JSON.parse(window.localStorage.getItem(props.symbol)))
         }
     }
@@ -40,11 +42,13 @@ export const StockData = (props) => {
                  <div className='stockData__tr'>
                     {stockDataText.map((data, index) => { 
                         return(
-                            <div key={data+index} className='stockData__container' onClick={data.type == '01. symbol' ? () => {getStockInformation()} : null }>
+                            <div key={data+index} className='stockData__container' onClick={data.type == '01. symbol' ? () => {getStockInformation(props.symbol)} : null }>
                                 <table>
                                     <tbody>
                                         <tr>
-                                            <td className={data.classes}>{stockInfo[data.type]}</td>
+                                            <td className={data.classes}>{
+                                            stockInfo[data.type]
+                                            }</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -59,6 +63,20 @@ export const StockData = (props) => {
     else {
         return null
     }
-    
-
 }
+
+
+const mapDispatchToProps = dispatch => {
+    return{
+        onGettingStockInfo:(symbol) => dispatch({
+            type:actionTypes.GET_INFO,
+            symbol
+        })
+    }
+}
+
+export default connect(null,mapDispatchToProps)(StockData)
+
+
+
+

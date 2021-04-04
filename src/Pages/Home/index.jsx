@@ -1,5 +1,5 @@
 import React from 'react';
-import { StockInfo } from '../../Components/StockInfo';
+import StockPanel  from '../../Components/StockPanel';
 import {StockList} from '../../Components/StockList';
 
 export const Home = () => {
@@ -7,7 +7,7 @@ export const Home = () => {
     return(
         <div className='home'>
             <StockList/>
-            <StockInfo/>
+            <StockPanel/>
         </div>
     )
 }

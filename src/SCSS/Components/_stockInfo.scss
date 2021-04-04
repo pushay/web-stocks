@@ -1,3 +1,31 @@
 .stockInfo {
-    background-color: purple;
+    padding: 6rem;
+    background-color: #4343c0;
+    box-shadow: 4px 4px 4px black;
+
+    &__data {
+        margin-bottom: 2rem;
+    }
+
+    &__header {
+        display: flex;
+        color: #fff;
+        margin-bottom: 1.5rem;
+    }
+
+    &__span {
+        margin-right: 1rem;
+        color: #fff;
+    }
+
+    &__text {
+        color: #fff;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+    }
+    
+    &__infoContainer {
+        
+    }
+
 }

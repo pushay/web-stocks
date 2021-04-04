@@ -1,12 +1,12 @@
 export const HomeStockList = [
-    'AAPL', 'TSLA','TWTR', 'AMZN'
+    'AAPL','TWTR', 'AMZN','NFLX', 'MCD'
 ]
 
 export const stockDataText = [
     {type:'01. symbol',classes:'stockData__td stockData__td--name'},
     {type:'04. low',classes:'stockData__td'},
     {type:'03. high',classes:'stockData__td'},
-    {type:'05. price',classes:'stockData__td'},
+    {type:'05.price',classes:'stockData__td'},
     {type:'10. change percent',classes:'stockData__td'}
 ]
 
@@ -17,3 +17,8 @@ export const StockParamList = [
     {name:'price',  classes:'stockParam__th stockParam__th--price'},
     {name:'change', classes:'stockParam__th stockParam__th--change'}
 ]
+
+export const stockInfoType = {
+    primary:['Name', 'Symbol'],
+    secondary:['Country', 'Currency', 'Sector', 'Description', "Price"] 
+}

@@ -1,0 +1,24 @@
+.message {
+    padding: 3rem;
+    
+    &--home {
+        background-color: #4343c0;
+        box-shadow: 4px 4px 4px black;
+    }
+
+    &__header {
+
+        &--home {
+            color: #fff;
+           
+        }
+    }
+
+    &__paragraph {
+        color: #fff;
+
+        &--home {
+
+        }
+    }
+}

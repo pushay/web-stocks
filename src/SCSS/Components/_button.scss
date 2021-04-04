@@ -1,0 +1,40 @@
+.button {
+    font-family: inherit;
+
+    &:focus {
+        outline: none;
+    }
+
+    &--home {
+        background-color: #fff;
+        padding: 0.4rem 1rem;
+        border-radius: 10px;
+        border: none;
+    }
+
+    &--buy {
+        width:100px;
+        border: 2px solid rgb(2, 2, 2);
+        height: 100%;
+        background-color: #C0C043;
+        font-weight: bold;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: #CDCD69;
+        }
+    }
+
+    &--sell {
+        height: 100%;
+        width:100px;
+        border: 2px solid rgb(7, 7, 7);
+        background-color: rgb(238, 51, 51);
+        color:#fff;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: #F26262;
+        }
+    }
+}

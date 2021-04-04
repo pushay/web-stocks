@@ -1,6 +1,6 @@
 import React from 'react';
 import {HomeStockList} from './StockListText';
-import {StockData} from '../StockData';
+import StockData from '../StockData';
 import { StockParam } from '../StockParam';
 
 export const StockList = () => {
